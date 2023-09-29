@@ -23,4 +23,5 @@ RUN sha256sum -c packer_${PACKER_VERSION}_SHA256SUMS
 RUN unzip packer_${PACKER_VERSION}_linux_amd64.zip -d /bin
 RUN rm -f packer_${PACKER_VERSION}_linux_amd64.zip
 
-ENTRYPOINT ["/bin/packer"]
+#ENTRYPOINT ["/bin/packer"]
+CMD ["bash"]
