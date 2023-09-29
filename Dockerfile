@@ -5,7 +5,7 @@ ENV PACKER_VERSION=1.9.4
 ENV PACKER_SHA256SUM=6cd5269c4245aa8c99e551d1b862460d63fe711c58bec618fade25f8492e80d9
 
 RUN apt-get update \
-  && apt-get install \
+  && apt-get -y install \
   bash \
   curl \
   git \
