@@ -1,8 +1,8 @@
 FROM docker.mirror.hashicorp.services/alpine:latest
 LABEL org.opencontainers.image.source="https://github.com/jbowdre/packer-xorriso-docker"
 
-ENV PACKER_VERSION=1.8.5
-ENV PACKER_SHA256SUM=1f17a724e5ccc696010c842e6d2bb2c2749ab18ce7bf06482012d3ddb9edeef2
+ENV PACKER_VERSION=1.9.4
+ENV PACKER_SHA256SUM=6cd5269c4245aa8c99e551d1b862460d63fe711c58bec618fade25f8492e80d9
 
 RUN apk --no-cache upgrade \
   && apk add --no-cache \
@@ -11,7 +11,8 @@ RUN apk --no-cache upgrade \
   git \
   openssl \
   wget \
-  xorriso
+  xorriso \
+  mkisofs
 
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip ./
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS ./
