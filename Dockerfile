@@ -4,8 +4,8 @@ LABEL org.opencontainers.image.source="https://github.com/jbowdre/packer-xorriso
 ENV PACKER_VERSION=1.9.4
 ENV PACKER_SHA256SUM=6cd5269c4245aa8c99e551d1b862460d63fe711c58bec618fade25f8492e80d9
 
-RUN apt --no-cache upgrade \
-  && apt install --no-cache \
+RUN apt upgrade \
+  && apt install \
   bash \
   curl \
   git \
