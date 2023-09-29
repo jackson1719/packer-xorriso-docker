@@ -12,7 +12,8 @@ RUN apt-get update \
   git \
   openssl \
   wget \
-  xorriso
+  xorriso \
+  mkisofs
 
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip ./
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS ./
